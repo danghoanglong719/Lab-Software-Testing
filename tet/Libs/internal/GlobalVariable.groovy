@@ -9,6 +9,26 @@ import com.kms.katalon.core.main.TestCaseMain
  */
 public class GlobalVariable {
      
+    /**
+     * <p></p>
+     */
+    public static Object URL
+     
+    /**
+     * <p></p>
+     */
+    public static Object username
+     
+    /**
+     * <p></p>
+     */
+    public static Object Username
+     
+    /**
+     * <p></p>
+     */
+    public static Object password
+     
 
     static {
         try {
@@ -16,6 +36,10 @@ public class GlobalVariable {
 			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
             selectedVariables += RunConfiguration.getOverridingParameters()
     
+            URL = selectedVariables['URL']
+            username = selectedVariables['username']
+            Username = selectedVariables['Username']
+            password = selectedVariables['password']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)
